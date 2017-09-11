@@ -7,7 +7,8 @@ namespace MSBios\Guard\Resource\Doctrine\Factory;
 
 use Doctrine\ORM\EntityManager;
 use Interop\Container\ContainerInterface;
-use MSBios\Guard\Resource\Provider\ResourceProvider;
+
+use MSBios\Guard\Resource\Doctrine\Provider\ResourceProvider;
 use Zend\ServiceManager\Factory\FactoryInterface;
 
 /**
