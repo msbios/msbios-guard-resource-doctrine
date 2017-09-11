@@ -41,6 +41,9 @@ return [
                 ],
             ],
         ],
+        'fixture' => [
+            Module::class => __DIR__ . '/../src/Fixture',
+        ]
     ],
 
     'service_manager' => [

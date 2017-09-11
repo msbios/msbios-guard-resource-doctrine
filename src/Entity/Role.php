@@ -9,7 +9,6 @@ use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\ORM\Mapping as ORM;
 use MSBios\Guard\Resource\Doctrine\Entity;
 
-
 /**
  * Class Role
  * @package MSBios\Guard\Resource\Doctrine\Entity

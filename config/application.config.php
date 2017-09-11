@@ -12,6 +12,7 @@ return [
         'Zend\Router',
         'DoctrineModule',
         'DoctrineORMModule',
+        'DoctrineDataFixtureModule',
         // Custom
         'MSBios\Resource',
         'MSBios\Guard\Resource',
