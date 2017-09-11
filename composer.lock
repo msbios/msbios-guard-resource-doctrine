@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "700562f213fd2b21783ad53745973002",
+    "content-hash": "cd39c0a2703f91e75ee3d8670f469a16",
     "packages": [
         {
             "name": "behat/transliterator",
@@ -1197,20 +1197,20 @@
         },
         {
             "name": "msbios/guard-resource",
-            "version": "v1.0.3",
+            "version": "v1.0.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/msbios/msbios-guard-resource.git",
-                "reference": "95b46271b638bc101d0e4a1c6fba7338c7b73182"
+                "reference": "2764434354e02fa8496fe571c9874c85d5402dda"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/msbios/msbios-guard-resource/zipball/95b46271b638bc101d0e4a1c6fba7338c7b73182",
-                "reference": "95b46271b638bc101d0e4a1c6fba7338c7b73182",
+                "url": "https://api.github.com/repos/msbios/msbios-guard-resource/zipball/2764434354e02fa8496fe571c9874c85d5402dda",
+                "reference": "2764434354e02fa8496fe571c9874c85d5402dda",
                 "shasum": ""
             },
             "require": {
-                "msbios/authentication": "^1.0",
+                "msbios/authentication": "~1.0",
                 "msbios/guard": "~1.0",
                 "msbios/resource": "~1.0",
                 "zendframework/zend-loader": "^2.5",
@@ -1243,7 +1243,7 @@
             "keywords": [
                 "php"
             ],
-            "time": "2017-09-10T21:03:10+00:00"
+            "time": "2017-09-11T07:40:48+00:00"
         },
         {
             "name": "msbios/msbios",
@@ -1332,16 +1332,16 @@
         },
         {
             "name": "msbios/resource-doctrine",
-            "version": "v1.0.2",
+            "version": "v1.0.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/msbios/msbios-resource-doctrine.git",
-                "reference": "5106cb6cef54d50bdcf89e30d0fa0dfb5d6ed217"
+                "reference": "4b16b54190a0d5fd2d41058caba4737af889279a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/msbios/msbios-resource-doctrine/zipball/5106cb6cef54d50bdcf89e30d0fa0dfb5d6ed217",
-                "reference": "5106cb6cef54d50bdcf89e30d0fa0dfb5d6ed217",
+                "url": "https://api.github.com/repos/msbios/msbios-resource-doctrine/zipball/4b16b54190a0d5fd2d41058caba4737af889279a",
+                "reference": "4b16b54190a0d5fd2d41058caba4737af889279a",
                 "shasum": ""
             },
             "require": {
@@ -1382,7 +1382,7 @@
             "keywords": [
                 "php"
             ],
-            "time": "2017-09-10T20:44:48+00:00"
+            "time": "2017-09-11T10:05:05+00:00"
         },
         {
             "name": "msbios/stdlib",

@@ -15,6 +15,7 @@ use MSBios\Guard\Resource\Doctrine\UserInterface;
  * Class User
  * @package MSBios\Guard\Resource\Doctrine\Entity
  *
+ * @ORM\Entity
  * @ORM\Table(name="acl_t_users")
  * @ORM\MappedSuperclass
  */

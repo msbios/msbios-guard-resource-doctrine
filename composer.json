@@ -43,6 +43,7 @@
       "phpunit"
     ],
     "alter": "./vendor/bin/doctrine-module orm:schema-tool:update --force",
+    "fixtures": "./vendor/bin/doctrine-module orm:fixtures:load",
     "commit": "git add . && git commit -a -m \"Lazy Composer Commiter\" && git push"
   }
 }
