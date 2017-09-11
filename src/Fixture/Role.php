@@ -11,7 +11,6 @@ use DoctrineDataFixtureModule\ContainerAwareInterface;
 use DoctrineDataFixtureModule\ContainerAwareTrait;
 use MSBios\Guard\Resource\Doctrine\Entity\Role as RoleEntity;
 
-
 /**
  * Class Role
  * @package MSBios\Guard\Resource\Doctrine\Fixture
@@ -79,6 +78,5 @@ class Role implements FixtureInterface, ContainerAwareInterface
 
         $manager->persist($developer);
         $manager->flush();
-
     }
 }
