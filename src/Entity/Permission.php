@@ -7,6 +7,8 @@ namespace MSBios\Guard\Resource\Doctrine\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 use MSBios\Guard\Resource\Doctrine\Entity;
+use MSBios\Resource\Doctrine\TimestampableAwareInterface;
+use MSBios\Resource\Doctrine\TimestampableAwareTrait;
 
 /**
  * Class Permission
@@ -16,8 +18,11 @@ use MSBios\Guard\Resource\Doctrine\Entity;
  * @ORM\Table(name="acl_t_permissions")
  * @ORM\MappedSuperclass
  */
-class Permission extends Entity
+class Permission extends Entity implements TimestampableAwareInterface
 {
+
+    use TimestampableAwareTrait;
+
     /**
      * @var Resource
      *

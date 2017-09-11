@@ -10,6 +10,10 @@ use Doctrine\ORM\Mapping as ORM;
 use MSBios\Authentication\IdentityInterface;
 use MSBios\Guard\Resource\Doctrine\Entity;
 use MSBios\Guard\Resource\Doctrine\UserInterface;
+use MSBios\Resource\Doctrine\RowStatusableAwareInterface;
+use MSBios\Resource\Doctrine\RowStatusableAwareTrait;
+use MSBios\Resource\Doctrine\TimestampableAwareInterface;
+use MSBios\Resource\Doctrine\TimestampableAwareTrait;
 
 /**
  * Class User
@@ -19,8 +23,16 @@ use MSBios\Guard\Resource\Doctrine\UserInterface;
  * @ORM\Table(name="acl_t_users")
  * @ORM\MappedSuperclass
  */
-class User extends Entity implements UserInterface, IdentityInterface
+class User extends Entity implements
+    UserInterface,
+    IdentityInterface,
+    TimestampableAwareInterface,
+    RowStatusableAwareInterface
 {
+
+    use TimestampableAwareTrait;
+    use RowStatusableAwareTrait;
+
     /**
      * @var string
      *

@@ -8,6 +8,10 @@ namespace MSBios\Guard\Resource\Doctrine\Entity;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\ORM\Mapping as ORM;
 use MSBios\Guard\Resource\Doctrine\Entity;
+use MSBios\Resource\Doctrine\RowStatusableAwareInterface;
+use MSBios\Resource\Doctrine\RowStatusableAwareTrait;
+use MSBios\Resource\Doctrine\TimestampableAwareInterface;
+use MSBios\Resource\Doctrine\TimestampableAwareTrait;
 
 /**
  * Class Resource
@@ -17,8 +21,13 @@ use MSBios\Guard\Resource\Doctrine\Entity;
  * @ORM\Table(name="acl_t_resources")
  * @ORM\MappedSuperclass
  */
-class Resource extends Entity
+class Resource extends Entity implements
+    TimestampableAwareInterface,
+    RowStatusableAwareInterface
 {
+    use TimestampableAwareTrait;
+    use RowStatusableAwareTrait;
+
     /**
      * @var Resource
      *
