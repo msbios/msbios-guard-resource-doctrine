@@ -19,6 +19,7 @@ use MSBios\Resource\Doctrine\TimestampableAwareTrait;
  * Class User
  * @package MSBios\Guard\Resource\Doctrine\Entity
  *
+ * @ORM\Entity
  * @ORM\Table(name="acl_t_users")
  * @ORM\MappedSuperclass
  */
