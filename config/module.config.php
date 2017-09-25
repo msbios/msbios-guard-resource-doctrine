@@ -6,6 +6,8 @@
 
 namespace MSBios\Guard\Resource\Doctrine;
 
+use Zend\ServiceManager\Factory\InvokableFactory;
+
 return [
     'doctrine' => [
         'configuration' => [
@@ -48,12 +50,22 @@ return [
 
     'service_manager' => [
         'factories' => [
-            Provider\ResourceProvider::class => Factory\ResourceProviderFactory::class,
-            Provider\RuleProvider::class => Factory\RuleProviderFactory::class,
+            Provider\ResourceProvider::class =>
+                Factory\ResourceProviderFactory::class,
+            Provider\RuleProvider::class =>
+                Factory\RuleProviderFactory::class,
         ]
     ],
 
     'form_elements' => [
+        'factories' => [
+            Form\ResourceForm::class =>
+                InvokableFactory::class
+        ],
+        'aliases' => [
+            \MSBios\Guard\Resource\Form\ResourceForm::class =>
+                Form\ResourceForm::class
+        ]
     ],
 
     'hydrators' => [
