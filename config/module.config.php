@@ -57,6 +57,15 @@ return [
         ]
     ],
 
+    'input_filters' => [
+        'factories' => [
+            InputFilter\ResourceInputFilter::class => InvokableFactory::class
+        ],
+        'aliases' => [
+            Form\ResourceForm::class => InputFilter\ResourceInputFilter::class
+        ]
+    ],
+
     'form_elements' => [
         'factories' => [
             Form\ResourceForm::class =>
