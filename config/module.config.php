@@ -76,12 +76,16 @@ return [
                 InvokableFactory::class,
             Form\RoleForm::class =>
                 InvokableFactory::class,
+            Form\RuleForm::class =>
+                InvokableFactory::class,
         ],
         'aliases' => [
             \MSBios\Guard\Resource\Form\ResourceForm::class =>
                 Form\ResourceForm::class,
             \MSBios\Guard\Resource\Form\RoleForm::class =>
-                Form\RoleForm::class
+                Form\RoleForm::class,
+            \MSBios\Guard\Resource\Form\RuleForm::class =>
+                Form\RuleForm::class
         ]
     ],
 
