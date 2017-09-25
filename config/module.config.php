@@ -59,10 +59,14 @@ return [
 
     'input_filters' => [
         'factories' => [
-            InputFilter\ResourceInputFilter::class => InvokableFactory::class
+            InputFilter\ResourceInputFilter::class => InvokableFactory::class,
+            InputFilter\RoleInputFilter::class => InvokableFactory::class
         ],
         'aliases' => [
-            Form\ResourceForm::class => InputFilter\ResourceInputFilter::class
+            Form\ResourceForm::class =>
+                InputFilter\ResourceInputFilter::class,
+            Form\RoleForm::class =>
+                InputFilter\RoleInputFilter::class,
         ]
     ],
 
