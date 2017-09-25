@@ -63,10 +63,15 @@ class User extends Entity implements
 
     /**
      * @var string
+     * @todo BCrypt === 60 letters
      *
-     * @ORM\Column(name="password", type="string", length=200, nullable=true)
+     * @ORM\Column(name="password", type="string", length=100, nullable=true)
      */
     private $password;
+
+    /** @const */
+    const STATE_ACTIVE = 'ACTIVE';
+    const STATE_INACTIVE = 'INACTIVE';
 
     /**
      * @var string
@@ -74,6 +79,17 @@ class User extends Entity implements
      * @ORM\Column(name="state", type="string", length=8, nullable=false)
      */
     private $state = 'ACTIVE';
+
+    /** @const */
+    const TYPE_REGULAR = 'REGULAR';
+    const TYPE_SYSTEM = 'SYSTEM';
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="type", type="string", length=8, nullable=false)
+     */
+    private $type = self::TYPE_REGULAR;
 
     /**
      * @var string
@@ -189,6 +205,22 @@ class User extends Entity implements
     public function setState($state)
     {
         $this->state = $state;
+    }
+
+    /**
+     * @return string
+     */
+    public function getType()
+    {
+        return $this->type;
+    }
+
+    /**
+     * @param string $type
+     */
+    public function setType($type)
+    {
+        $this->type = $type;
     }
 
     /**
