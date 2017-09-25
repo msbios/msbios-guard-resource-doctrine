@@ -36,6 +36,7 @@ class ResourceForm extends DefaultRecourceForm implements ObjectManagerAwareInte
                 'property' => 'name',
                 'display_empty_item' => true,
                 'empty_item_label' => '---',
+                'allow_empty' => true
             ],
         ]);
 
