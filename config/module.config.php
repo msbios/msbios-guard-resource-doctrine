@@ -69,11 +69,15 @@ return [
     'form_elements' => [
         'factories' => [
             Form\ResourceForm::class =>
-                InvokableFactory::class
+                InvokableFactory::class,
+            Form\RoleForm::class =>
+                InvokableFactory::class,
         ],
         'aliases' => [
             \MSBios\Guard\Resource\Form\ResourceForm::class =>
-                Form\ResourceForm::class
+                Form\ResourceForm::class,
+            \MSBios\Guard\Resource\Form\RoleForm::class =>
+                Form\RoleForm::class
         ]
     ],
 
