@@ -1202,16 +1202,16 @@
         },
         {
             "name": "msbios/guard-resource",
-            "version": "v1.0.6",
+            "version": "v1.0.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/msbios/msbios-guard-resource.git",
-                "reference": "2f2d4b2a3c13439760d555716bb53c8b633b60ff"
+                "reference": "868df50423a1d3bc19a0a09d05e52069f64d83c9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/msbios/msbios-guard-resource/zipball/2f2d4b2a3c13439760d555716bb53c8b633b60ff",
-                "reference": "2f2d4b2a3c13439760d555716bb53c8b633b60ff",
+                "url": "https://api.github.com/repos/msbios/msbios-guard-resource/zipball/868df50423a1d3bc19a0a09d05e52069f64d83c9",
+                "reference": "868df50423a1d3bc19a0a09d05e52069f64d83c9",
                 "shasum": ""
             },
             "require": {
@@ -1248,7 +1248,7 @@
             "keywords": [
                 "php"
             ],
-            "time": "2017-09-25T09:29:48+00:00"
+            "time": "2017-09-25T14:02:14+00:00"
         },
         {
             "name": "msbios/json",

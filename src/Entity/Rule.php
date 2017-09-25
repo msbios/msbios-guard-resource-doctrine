@@ -69,7 +69,7 @@ class Rule extends Entity implements
      *
      * @ORM\Column(name="access", type="rule_type", nullable=false)
      */
-    private $access = \MSBios\Guard\Resource\Entity\Rule::ACCESS_ALLOW;
+    private $access = \MSBios\Guard\Resource\Record\Rule::ACCESS_ALLOW;
 
     /**
      * @var string
