@@ -7,13 +7,13 @@
 namespace MSBios\Guard\Resource\Doctrine\Form;
 
 use MSBios\Guard\Resource\Doctrine\Form\Element\ResourceSelect;
-use MSBios\Guard\Resource\Form\ResourceForm as DefaultRecourceForm;
+use MSBios\Guard\Resource\Form\RuleForm as DefaultRuleForm;
 
 /**
- * Class RuleForm
+ * Class RuleForm1
  * @package MSBios\Guard\Resource\Doctrine\Form
  */
-class RuleForm extends DefaultRecourceForm
+class RuleForm1 extends DefaultRuleForm
 {
     /**
      *
