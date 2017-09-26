@@ -245,4 +245,24 @@ class User extends Entity implements
     {
         return $this->roles;
     }
+
+    /**
+     * @param Role $role
+     * @return $this
+     */
+    public function addRoles(Role $role)
+    {
+        $this->roles->add($role);
+        return $this;
+    }
+
+    /**
+     * @param Role $role
+     * @return $this
+     */
+    public function removeRoles(Role $role)
+    {
+        $this->roles->removeElement($role);
+        return $this;
+    }
 }
