@@ -81,6 +81,8 @@ return [
                 InvokableFactory::class,
             Form\RuleForm::class =>
                 InvokableFactory::class,
+            Form\UserForm::class =>
+                InvokableFactory::class,
 
             // Elements
             Form\Element\ResourceSelect::class =>
