@@ -6,6 +6,7 @@
 namespace MSBios\Guard\Resource\Doctrine\Entity;
 
 use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 use MSBios\Authentication\IdentityInterface;
 use MSBios\Guard\Resource\Doctrine\Entity;
@@ -247,12 +248,15 @@ class User extends Entity implements
     }
 
     /**
-     * @param Role $role
+     * @param Collection $roles
      * @return $this
      */
-    public function addRoles(Role $role)
+    public function addRoles(Collection $roles)
     {
-        $this->roles->add($role);
+        /** @var Role $role */
+        foreach ($roles as $role) {
+            $this->addRole($role);
+        }
         return $this;
     }
 
@@ -260,7 +264,29 @@ class User extends Entity implements
      * @param Role $role
      * @return $this
      */
-    public function removeRoles(Role $role)
+    public function addRole(Role $role)
+    {
+        $this->roles->add($role);
+        return $this;
+    }
+
+    /**
+     * @param Collection $roles
+     * @return $this
+     */
+    public function removeRoles(Collection $roles)
+    {
+        foreach ($roles as $role) {
+            $this->removeRole($role);
+        }
+        return $this;
+    }
+
+    /**
+     * @param Role $role
+     * @return $this
+     */
+    public function removeRole(Role $role)
     {
         $this->roles->removeElement($role);
         return $this;
