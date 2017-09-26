@@ -35,7 +35,7 @@ class UserForm extends DefaultUserForm implements ObjectManagerAwareInterface
                 'target_class' => Role::class,
                 'property' => 'name',
                 // 'display_empty_item' => true,
-                // 'empty_item_label' => '---',
+                'empty_item_label' => '---',
             ],
             'attributes' => [
                 'multiple' => 'multiple',
