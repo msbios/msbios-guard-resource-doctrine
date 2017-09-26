@@ -59,8 +59,10 @@ return [
 
     'input_filters' => [
         'factories' => [
-            InputFilter\ResourceInputFilter::class => InvokableFactory::class,
-            InputFilter\RoleInputFilter::class => InvokableFactory::class
+            InputFilter\ResourceInputFilter::class =>
+                InvokableFactory::class,
+            InputFilter\RoleInputFilter::class =>
+                InvokableFactory::class
         ],
         'aliases' => [
             Form\ResourceForm::class =>
@@ -72,12 +74,17 @@ return [
 
     'form_elements' => [
         'factories' => [
+            // Forms
             Form\ResourceForm::class =>
                 InvokableFactory::class,
             Form\RoleForm::class =>
                 InvokableFactory::class,
             Form\RuleForm::class =>
                 InvokableFactory::class,
+
+            // Elements
+            Form\Element\ResourceSelect::class =>
+                InvokableFactory::class
         ],
         'aliases' => [
             \MSBios\Guard\Resource\Form\ResourceForm::class =>
@@ -90,8 +97,6 @@ return [
     ],
 
     'hydrators' => [
-        'factories' => [
-        ],
         'aliases' => [
             \MSBios\Guard\Resource\Form\UserForm::class =>
                 \DoctrineModule\Stdlib\Hydrator\DoctrineObject::class
