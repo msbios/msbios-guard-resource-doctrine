@@ -10,10 +10,10 @@ use MSBios\Guard\Resource\Doctrine\Form\Element\ResourceSelect;
 use MSBios\Guard\Resource\Form\RuleForm as DefaultRuleForm;
 
 /**
- * Class RuleForm1
+ * Class RuleForm
  * @package MSBios\Guard\Resource\Doctrine\Form
  */
-class RuleForm1 extends DefaultRuleForm
+class RuleForm extends DefaultRuleForm
 {
     /**
      *
