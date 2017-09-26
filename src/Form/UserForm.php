@@ -36,6 +36,7 @@ class UserForm extends DefaultUserForm implements ObjectManagerAwareInterface
                 'property' => 'name',
                 // 'display_empty_item' => true,
                 'empty_item_label' => '---',
+                'allow_empty' => true
             ],
             'attributes' => [
                 'multiple' => 'multiple',
