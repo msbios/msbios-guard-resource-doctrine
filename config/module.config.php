@@ -92,7 +92,9 @@ return [
             \MSBios\Guard\Resource\Form\RoleForm::class =>
                 Form\RoleForm::class,
             \MSBios\Guard\Resource\Form\RuleForm::class =>
-                Form\RuleForm::class
+                Form\RuleForm::class,
+            \MSBios\Guard\Resource\Form\UserForm::class =>
+                Form\UserForm::class
         ]
     ],
 
