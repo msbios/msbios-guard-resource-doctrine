@@ -69,6 +69,8 @@ return [
                 InputFilter\ResourceInputFilter::class,
             Form\RoleForm::class =>
                 InputFilter\RoleInputFilter::class,
+            Form\UserForm::class =>
+                \MSBios\Guard\Resource\InputFilter\UserInputFilter::class
         ]
     ],
 
