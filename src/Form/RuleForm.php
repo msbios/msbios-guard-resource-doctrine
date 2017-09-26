@@ -24,10 +24,7 @@ class RuleForm extends DefaultRecourceForm
 
         $this->add([
             'type' => ResourceSelect::class,
-            'name' => 'resource',
-            'options' => [
-                'allow_empty' => true
-            ],
+            'name' => 'resource'
         ]);
     }
 }
