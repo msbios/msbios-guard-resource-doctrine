@@ -77,6 +77,8 @@ return [
     'form_elements' => [
         'factories' => [
             // Forms
+            Form\PermissionForm::class =>
+                InvokableFactory::class,
             Form\ResourceForm::class =>
                 InvokableFactory::class,
             Form\RoleForm::class =>
@@ -91,6 +93,8 @@ return [
                 InvokableFactory::class
         ],
         'aliases' => [
+            \MSBios\Guard\Resource\Form\PermissionForm::class =>
+                Form\PermissionForm::class,
             \MSBios\Guard\Resource\Form\ResourceForm::class =>
                 Form\ResourceForm::class,
             \MSBios\Guard\Resource\Form\RoleForm::class =>
