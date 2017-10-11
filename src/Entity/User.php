@@ -111,6 +111,12 @@ class User extends Entity implements
      */
     private $roles;
 
+    public function init()
+    {
+        parent::init();
+        $this->roles = new ArrayCollection;
+    }
+
     /**
      * @return string
      */
