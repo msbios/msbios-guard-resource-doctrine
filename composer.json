@@ -36,12 +36,20 @@
   "scripts": {
     "cs-check": "phpcs",
     "cs-fix": "phpcbf",
+
     "test": [
       "@cs-check",
-      "phpunit"
+      "phpunit --colors=always"
     ],
+    "test-coverage": "phpunit --colors=always --coverage-clover clover.xml",
+    "upload-coverage": "coveralls -v",
     "alter": "./vendor/bin/doctrine-module orm:schema-tool:update --force",
     "fixtures": "./vendor/bin/doctrine-module orm:fixtures:load",
     "commit": "git add . && git commit -a -m \"Lazy Composer Commiter\" && git push"
+  },
+  "extra": {
+    "zf": {
+      "component": "MSBios\\Guard\\Resource\\Doctrine"
+    }
   }
 }

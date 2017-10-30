@@ -7,7 +7,7 @@
 namespace MSBios\Guard\Resource\Doctrine\Form;
 
 use DoctrineModule\Persistence\ObjectManagerAwareInterface;
-use MSBios\Form\Doctrine\ObjectManagerAwareTrait;
+use MSBios\Doctrine\ObjectManagerAwareTrait;
 use MSBios\Guard\Resource\Doctrine\Form\Element\ResourceSelect;
 use MSBios\Guard\Resource\Form\ResourceForm as DefaultRecourceForm;
 

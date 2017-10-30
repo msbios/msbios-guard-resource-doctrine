@@ -8,7 +8,7 @@ namespace MSBios\Guard\Resource\Doctrine\Form;
 
 use DoctrineModule\Form\Element\ObjectSelect;
 use DoctrineModule\Persistence\ObjectManagerAwareInterface;
-use MSBios\Form\Doctrine\ObjectManagerAwareTrait;
+use MSBios\Doctrine\ObjectManagerAwareTrait;
 use MSBios\Guard\Resource\Doctrine\Entity\Role;
 use MSBios\Guard\Resource\Form\UserForm as DefaultUserForm;
 
@@ -34,7 +34,6 @@ class UserForm extends DefaultUserForm implements ObjectManagerAwareInterface
                 'object_manager' => $this->getObjectManager(),
                 'target_class' => Role::class,
                 'property' => 'name',
-                // 'display_empty_item' => true,
                 'empty_item_label' => '---',
                 'allow_empty' => true
             ],
