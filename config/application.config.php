@@ -8,17 +8,51 @@
 return [
     // Retrieve list of modules used in this application.
     'modules' => [
-        // Standart
+        'MSBios\Test',
+        'Zend\Db',
+        'Zend\Cache',
+        'Zend\Paginator',
+        'Zend\Filter',
+        'Zend\Form',
+        'Zend\Mvc\Plugin\FilePrg',
+        'Zend\Mvc\Plugin\Identity',
+        'Zend\Mvc\Plugin\Prg',
+        'Zend\Mvc\Plugin\FlashMessenger',
+        'Zend\I18n',
+        'Zend\Navigation',
         'Zend\Router',
+        'Zend\InputFilter',
+        'Zend\Hydrator',
+
         'DoctrineModule',
         'DoctrineORMModule',
-        'DoctrineDataFixtureModule',
-        // Custom
+
+        'MSBios\Db',
+        'MSBios\I18n',
+        'MSBios\Form',
+        'MSBios\Assetic',
+        'MSBios\Widget',
+        'MSBios\Theme',
+        'MSBios\Navigation',
+        'MSBios\Application',
+
+        'MSBios\Guard',
+        'MSBios\CPanel',
         'MSBios\Resource',
+        'MSBios\Authentication',
         'MSBios\Guard\Resource',
+        'MSBios\Guard\CPanel',
+
         'MSBios\Doctrine',
+        'MSBios\Form\Doctrine',
+        'MSBios\CPanel\Doctrine',
         'MSBios\Resource\Doctrine',
+        'MSBios\Authentication\Doctrine',
         'MSBios\Guard\Resource\Doctrine',
+        'MSBios\Guard\CPanel\Doctrine',
+
+        'Zend\Log',
+        'ZendDeveloperTools',
     ],
     // These are various options for the listeners attached to the ModuleManager
     'module_listener_options' => [

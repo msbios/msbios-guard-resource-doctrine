@@ -10,6 +10,7 @@ use Zend\ServiceManager\Factory\InvokableFactory;
 
 return [
     'doctrine' => [
+
         'configuration' => [
             'orm_default' => [
                 'types' => [
@@ -18,6 +19,7 @@ return [
                 ],
             ],
         ],
+
         'driver' => [
             // defines an annotation driver with two paths, and names it `my_annotation_driver`
             Module::class => [
@@ -36,10 +38,20 @@ return [
                 ]
             ],
         ],
+
+        'authentication' => [
+            'orm_default' => [
+                'identity_class' => UserInterface::class,
+                'identity_property' => 'username',
+                'credential_property' => 'password'
+            ],
+        ],
+
         'entity_resolver' => [
             'orm_default' => [
                 'resolvers' => [
-                    UserInterface::class => Entity\User::class
+                    UserInterface::class =>
+                        Entity\User::class
                 ],
             ],
         ],
