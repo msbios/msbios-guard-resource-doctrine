@@ -1,7 +1,7 @@
 {
   "name": "msbios/guard-resource-doctrine",
   "description": "MSBios Guard Resource Doctrine",
-  "license": "GPL",
+  "license": "MIT",
   "keywords": [
     "php"
   ],
