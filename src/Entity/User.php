@@ -126,11 +126,13 @@ class User extends Entity implements
     }
 
     /**
-     * @param string $username
+     * @param $username
+     * @return $this
      */
     public function setUsername($username)
     {
         $this->username = $username;
+        return $this;
     }
 
     /**
@@ -142,11 +144,13 @@ class User extends Entity implements
     }
 
     /**
-     * @param string $firstname
+     * @param $firstname
+     * @return $this
      */
     public function setFirstname($firstname)
     {
         $this->firstname = $firstname;
+        return $this;
     }
 
     /**
@@ -158,11 +162,13 @@ class User extends Entity implements
     }
 
     /**
-     * @param string $lastname
+     * @param $lastname
+     * @return $this
      */
     public function setLastname($lastname)
     {
         $this->lastname = $lastname;
+        return $this;
     }
 
     /**
@@ -174,11 +180,13 @@ class User extends Entity implements
     }
 
     /**
-     * @param string $email
+     * @param $email
+     * @return $this
      */
     public function setEmail($email)
     {
         $this->email = $email;
+        return $this;
     }
 
     /**
@@ -190,11 +198,13 @@ class User extends Entity implements
     }
 
     /**
-     * @param string $password
+     * @param $password
+     * @return $this
      */
     public function setPassword($password)
     {
         $this->password = $password;
+        return $this;
     }
 
     /**
@@ -206,11 +216,13 @@ class User extends Entity implements
     }
 
     /**
-     * @param string $state
+     * @param $state
+     * @return $this
      */
     public function setState($state)
     {
         $this->state = $state;
+        return $this;
     }
 
     /**
@@ -222,11 +234,13 @@ class User extends Entity implements
     }
 
     /**
-     * @param string $type
+     * @param $type
+     * @return $this
      */
     public function setType($type)
     {
         $this->type = $type;
+        return $this;
     }
 
     /**
@@ -238,11 +252,13 @@ class User extends Entity implements
     }
 
     /**
-     * @param string $options
+     * @param $options
+     * @return $this
      */
     public function setOptions($options)
     {
         $this->options = $options;
+        return $this;
     }
 
     /**
@@ -282,6 +298,7 @@ class User extends Entity implements
      */
     public function removeRoles(Collection $roles)
     {
+        /** @var Role $role */
         foreach ($roles as $role) {
             $this->removeRole($role);
         }

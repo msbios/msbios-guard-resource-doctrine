@@ -8,15 +8,19 @@ namespace MSBios\Guard\Resource\Doctrine;
 use MSBios\ModuleInterface;
 use Zend\Loader\AutoloaderFactory;
 use Zend\Loader\StandardAutoloader;
+use Zend\ModuleManager\Feature\AutoloaderProviderInterface;
 
 /**
  * Class Module
  * @package MSBios\Guard\Resource\Doctrine
  */
-class Module implements ModuleInterface
+class Module implements
+    ModuleInterface,
+    AutoloaderProviderInterface
 {
+
     /** @const VERSION */
-    const VERSION = '1.0.32';
+    const VERSION = '1.0.33';
 
     /**
      * @return mixed
