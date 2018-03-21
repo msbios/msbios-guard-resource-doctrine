@@ -11,6 +11,8 @@ use DoctrineModule\Persistence\ObjectManagerAwareInterface;
 use MSBios\Doctrine\ObjectManagerAwareTrait;
 use MSBios\Guard\Resource\Doctrine\Entity\Role;
 use MSBios\Guard\Resource\Form\UserForm as DefaultUserForm;
+use MSBios\Guard\Resource\InputFilter\UserInputFilter;
+use Zend\InputFilter\InputFilterInterface;
 
 /**
  * Class UserForm
@@ -21,7 +23,7 @@ class UserForm extends DefaultUserForm implements ObjectManagerAwareInterface
     use ObjectManagerAwareTrait;
 
     /**
-     *
+     * @return $this
      */
     public function init()
     {
@@ -35,11 +37,20 @@ class UserForm extends DefaultUserForm implements ObjectManagerAwareInterface
                 'target_class' => Role::class,
                 'property' => 'name',
                 'empty_item_label' => '---',
-                'allow_empty' => true
+                'allow_empty' => true,
+                'required' => false
             ],
             'attributes' => [
                 'multiple' => 'multiple',
             ],
         ]);
+
+        /** @TODO: Need call from InputFilterManager */
+        /** @var InputFilterInterface $inputFilter */
+        $inputFilter = new UserInputFilter;
+        $inputFilter->init();
+        $this->setInputFilter($inputFilter);
+
+        return $this;
     }
 }
