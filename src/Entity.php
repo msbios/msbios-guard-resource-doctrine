@@ -6,17 +6,14 @@
 namespace MSBios\Guard\Resource\Doctrine;
 
 use Doctrine\ORM\Mapping as ORM;
-use MSBios\Resource\Doctrine\EntityInterface;
-use MSBios\Resource\Doctrine\IdentifierableAwareInterface;
-use MSBios\Resource\Doctrine\IdentifierAwareTrait;
-use MSBios\Resource\Record;
+use MSBios\Resource\Doctrine\Entity as DefaultEntity;
 
 /**
  * Class Entity
  * @package MSBios\Resource\Doctrine
  * @ORM\MappedSuperclass
  */
-abstract class Entity extends Record implements EntityInterface, IdentifierableAwareInterface
+abstract class Entity extends DefaultEntity
 {
-    use IdentifierAwareTrait;
+    // ...
 }

@@ -376,16 +376,16 @@
         },
         {
             "name": "doctrine/common",
-            "version": "v2.9.0",
+            "version": "v2.10.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/common.git",
-                "reference": "a210246d286c77d2b89040f8691ba7b3a713d2c1"
+                "reference": "30e33f60f64deec87df728c02b107f82cdafad9d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/common/zipball/a210246d286c77d2b89040f8691ba7b3a713d2c1",
-                "reference": "a210246d286c77d2b89040f8691ba7b3a713d2c1",
+                "url": "https://api.github.com/repos/doctrine/common/zipball/30e33f60f64deec87df728c02b107f82cdafad9d",
+                "reference": "30e33f60f64deec87df728c02b107f82cdafad9d",
                 "shasum": ""
             },
             "require": {
@@ -395,7 +395,7 @@
                 "doctrine/event-manager": "^1.0",
                 "doctrine/inflector": "^1.0",
                 "doctrine/lexer": "^1.0",
-                "doctrine/persistence": "^1.0",
+                "doctrine/persistence": "^1.1",
                 "doctrine/reflection": "^1.0",
                 "php": "^7.1"
             },
@@ -408,7 +408,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "2.9.x-dev"
+                    "dev-master": "2.10.x-dev"
                 }
             },
             "autoload": {
@@ -446,16 +446,14 @@
                     "email": "ocramius@gmail.com"
                 }
             ],
-            "description": "Common Library for Doctrine projects",
-            "homepage": "https://www.doctrine-project.org",
+            "description": "PHP Doctrine Common project is a library that provides additional functionality that other Doctrine projects depend on such as better reflection support, persistence interfaces, proxies, event system and much more.",
+            "homepage": "https://www.doctrine-project.org/projects/common.html",
             "keywords": [
-                "annotations",
-                "collections",
-                "eventmanager",
-                "persistence",
-                "spl"
+                "common",
+                "doctrine",
+                "php"
             ],
-            "time": "2018-07-12T21:16:12+00:00"
+            "time": "2018-11-21T01:24:55+00:00"
         },
         {
             "name": "doctrine/data-fixtures",
@@ -1027,16 +1025,16 @@
         },
         {
             "name": "doctrine/orm",
-            "version": "v2.6.2",
+            "version": "v2.6.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/doctrine2.git",
-                "reference": "d2b4dd71d2a276edd65d0c170375b445f8a4a4a8"
+                "reference": "434820973cadf2da2d66e7184be370084cc32ca8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/doctrine2/zipball/d2b4dd71d2a276edd65d0c170375b445f8a4a4a8",
-                "reference": "d2b4dd71d2a276edd65d0c170375b445f8a4a4a8",
+                "url": "https://api.github.com/repos/doctrine/doctrine2/zipball/434820973cadf2da2d66e7184be370084cc32ca8",
+                "reference": "434820973cadf2da2d66e7184be370084cc32ca8",
                 "shasum": ""
             },
             "require": {
@@ -1105,20 +1103,20 @@
                 "database",
                 "orm"
             ],
-            "time": "2018-07-12T20:47:13+00:00"
+            "time": "2018-11-20T23:46:46+00:00"
         },
         {
             "name": "doctrine/persistence",
-            "version": "v1.0.1",
+            "version": "v1.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/persistence.git",
-                "reference": "af1ec238659a83e320f03e0e454e200f689b4b97"
+                "reference": "c0f1c17602afc18b4cbd8e1c8125f264c9cf7d38"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/persistence/zipball/af1ec238659a83e320f03e0e454e200f689b4b97",
-                "reference": "af1ec238659a83e320f03e0e454e200f689b4b97",
+                "url": "https://api.github.com/repos/doctrine/persistence/zipball/c0f1c17602afc18b4cbd8e1c8125f264c9cf7d38",
+                "reference": "c0f1c17602afc18b4cbd8e1c8125f264c9cf7d38",
                 "shasum": ""
             },
             "require": {
@@ -1130,17 +1128,17 @@
                 "php": "^7.1"
             },
             "conflict": {
-                "doctrine/common": "<2.9@dev"
+                "doctrine/common": "<2.10@dev"
             },
             "require-dev": {
-                "doctrine/coding-standard": "^4.0",
+                "doctrine/coding-standard": "^5.0",
                 "phpstan/phpstan": "^0.8",
                 "phpunit/phpunit": "^7.0"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.0.x-dev"
+                    "dev-master": "1.1.x-dev"
                 }
             },
             "autoload": {
@@ -1178,12 +1176,16 @@
                     "email": "ocramius@gmail.com"
                 }
             ],
-            "description": "Doctrine Persistence abstractions.",
+            "description": "The Doctrine Persistence project is a set of shared interfaces and functionality that the different Doctrine object mappers share.",
             "homepage": "https://doctrine-project.org/projects/persistence.html",
             "keywords": [
+                "mapper",
+                "object",
+                "odm",
+                "orm",
                 "persistence"
             ],
-            "time": "2018-07-12T12:37:50+00:00"
+            "time": "2018-11-21T00:33:13+00:00"
         },
         {
             "name": "doctrine/reflection",
@@ -1695,16 +1697,16 @@
         },
         {
             "name": "msbios/assetic",
-            "version": "v1.0.5",
+            "version": "v1.0.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/msbios/msbios-assetic.git",
-                "reference": "f925f48b1b3c40d7cbb7e1edd91798b72569c036"
+                "reference": "aca81950ffcc698c418cd9a8e31f7a48abfb9890"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/msbios/msbios-assetic/zipball/f925f48b1b3c40d7cbb7e1edd91798b72569c036",
-                "reference": "f925f48b1b3c40d7cbb7e1edd91798b72569c036",
+                "url": "https://api.github.com/repos/msbios/msbios-assetic/zipball/aca81950ffcc698c418cd9a8e31f7a48abfb9890",
+                "reference": "aca81950ffcc698c418cd9a8e31f7a48abfb9890",
                 "shasum": ""
             },
             "require": {
@@ -1744,7 +1746,7 @@
             "keywords": [
                 "php"
             ],
-            "time": "2018-03-18T15:21:18+00:00"
+            "time": "2018-11-20T21:41:42+00:00"
         },
         {
             "name": "msbios/authentication",
@@ -1899,16 +1901,16 @@
         },
         {
             "name": "msbios/cpanel",
-            "version": "v1.0.42",
+            "version": "v1.0.48",
             "source": {
                 "type": "git",
                 "url": "https://github.com/msbios/msbios-cpanel.git",
-                "reference": "3088afb12b953d2428e874ba98106b54274ec15c"
+                "reference": "dee83a8fa4ea0f285bf30212e6de657b010497d7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/msbios/msbios-cpanel/zipball/3088afb12b953d2428e874ba98106b54274ec15c",
-                "reference": "3088afb12b953d2428e874ba98106b54274ec15c",
+                "url": "https://api.github.com/repos/msbios/msbios-cpanel/zipball/dee83a8fa4ea0f285bf30212e6de657b010497d7",
+                "reference": "dee83a8fa4ea0f285bf30212e6de657b010497d7",
                 "shasum": ""
             },
             "require": {
@@ -1923,6 +1925,7 @@
                 "msbios/debug": "^1.0",
                 "msbios/guard": "^1.0",
                 "msbios/guard-cpanel": "^1.0",
+                "msbios/guard-developer-tools": "^1.0",
                 "msbios/guard-resource": "^1.0",
                 "msbios/resource": "^1.0",
                 "msbios/test": "^1.0",
@@ -1954,20 +1957,20 @@
             "keywords": [
                 "php"
             ],
-            "time": "2018-08-21T13:33:44+00:00"
+            "time": "2018-11-21T09:28:20+00:00"
         },
         {
             "name": "msbios/cpanel-doctrine",
-            "version": "v1.0.26",
+            "version": "v1.0.33",
             "source": {
                 "type": "git",
                 "url": "https://github.com/msbios/msbios-cpanel-doctrine.git",
-                "reference": "d224cc36abfbd1196497eddad4a8fbf6c855cdff"
+                "reference": "2cd7049d3989dd45d61edb74489f6a5bbe090fe3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/msbios/msbios-cpanel-doctrine/zipball/d224cc36abfbd1196497eddad4a8fbf6c855cdff",
-                "reference": "d224cc36abfbd1196497eddad4a8fbf6c855cdff",
+                "url": "https://api.github.com/repos/msbios/msbios-cpanel-doctrine/zipball/2cd7049d3989dd45d61edb74489f6a5bbe090fe3",
+                "reference": "2cd7049d3989dd45d61edb74489f6a5bbe090fe3",
                 "shasum": ""
             },
             "require-dev": {
@@ -2007,7 +2010,7 @@
             "keywords": [
                 "php"
             ],
-            "time": "2018-03-21T14:55:41+00:00"
+            "time": "2018-11-20T15:29:37+00:00"
         },
         {
             "name": "msbios/db",
@@ -2267,16 +2270,16 @@
         },
         {
             "name": "msbios/guard",
-            "version": "v1.0.27",
+            "version": "v1.0.30",
             "source": {
                 "type": "git",
                 "url": "https://github.com/msbios/msbios-guard.git",
-                "reference": "8ebcc4a8f94e0bb172d6d0538d9eec19b4270780"
+                "reference": "19234ec89d146f7da0a197b48ff3049cb228e83a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/msbios/msbios-guard/zipball/8ebcc4a8f94e0bb172d6d0538d9eec19b4270780",
-                "reference": "8ebcc4a8f94e0bb172d6d0538d9eec19b4270780",
+                "url": "https://api.github.com/repos/msbios/msbios-guard/zipball/19234ec89d146f7da0a197b48ff3049cb228e83a",
+                "reference": "19234ec89d146f7da0a197b48ff3049cb228e83a",
                 "shasum": ""
             },
             "require": {
@@ -2318,7 +2321,7 @@
             "keywords": [
                 "php"
             ],
-            "time": "2018-11-10T17:31:24+00:00"
+            "time": "2018-11-18T16:14:06+00:00"
         },
         {
             "name": "msbios/guard-cpanel",
@@ -2434,16 +2437,16 @@
         },
         {
             "name": "msbios/guard-resource",
-            "version": "v1.0.22",
+            "version": "v1.0.24",
             "source": {
                 "type": "git",
                 "url": "https://github.com/msbios/msbios-guard-resource.git",
-                "reference": "d7f0c581e1ad996209c48cf89b56667132f298f6"
+                "reference": "19bef70c23fe56fe15a07b2cfb489a164c2dbd80"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/msbios/msbios-guard-resource/zipball/d7f0c581e1ad996209c48cf89b56667132f298f6",
-                "reference": "d7f0c581e1ad996209c48cf89b56667132f298f6",
+                "url": "https://api.github.com/repos/msbios/msbios-guard-resource/zipball/19bef70c23fe56fe15a07b2cfb489a164c2dbd80",
+                "reference": "19bef70c23fe56fe15a07b2cfb489a164c2dbd80",
                 "shasum": ""
             },
             "require-dev": {
@@ -2478,7 +2481,7 @@
             "keywords": [
                 "php"
             ],
-            "time": "2018-08-15T12:14:58+00:00"
+            "time": "2018-11-18T16:23:28+00:00"
         },
         {
             "name": "msbios/hydrator",
@@ -2792,16 +2795,16 @@
         },
         {
             "name": "msbios/resource",
-            "version": "v1.0.15",
+            "version": "v1.0.21",
             "source": {
                 "type": "git",
                 "url": "https://github.com/msbios/msbios-resource.git",
-                "reference": "fbf82dd3ad21508b0165229f2350c56bd4308e24"
+                "reference": "57c38bffd14a9d5a4103ddc1e6483d1e0583658a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/msbios/msbios-resource/zipball/fbf82dd3ad21508b0165229f2350c56bd4308e24",
-                "reference": "fbf82dd3ad21508b0165229f2350c56bd4308e24",
+                "url": "https://api.github.com/repos/msbios/msbios-resource/zipball/57c38bffd14a9d5a4103ddc1e6483d1e0583658a",
+                "reference": "57c38bffd14a9d5a4103ddc1e6483d1e0583658a",
                 "shasum": ""
             },
             "require": {
@@ -2836,20 +2839,20 @@
             "keywords": [
                 "php"
             ],
-            "time": "2018-10-24T14:01:01+00:00"
+            "time": "2018-11-18T19:53:21+00:00"
         },
         {
             "name": "msbios/resource-doctrine",
-            "version": "v1.0.25",
+            "version": "v1.0.33",
             "source": {
                 "type": "git",
                 "url": "https://github.com/msbios/msbios-resource-doctrine.git",
-                "reference": "2fba0093d65ee5aa72a3ab00f2a859f228a94755"
+                "reference": "e7d1941b9e46034fdc01af82d8ed699a831e1154"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/msbios/msbios-resource-doctrine/zipball/2fba0093d65ee5aa72a3ab00f2a859f228a94755",
-                "reference": "2fba0093d65ee5aa72a3ab00f2a859f228a94755",
+                "url": "https://api.github.com/repos/msbios/msbios-resource-doctrine/zipball/e7d1941b9e46034fdc01af82d8ed699a831e1154",
+                "reference": "e7d1941b9e46034fdc01af82d8ed699a831e1154",
                 "shasum": ""
             },
             "require": {
@@ -2890,7 +2893,7 @@
             "keywords": [
                 "php"
             ],
-            "time": "2018-10-25T14:14:14+00:00"
+            "time": "2018-11-20T14:09:52+00:00"
         },
         {
             "name": "msbios/stdlib",
@@ -4026,16 +4029,16 @@
         },
         {
             "name": "phpunit/phpunit",
-            "version": "7.4.3",
+            "version": "7.4.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/phpunit.git",
-                "reference": "c151651fb6ed264038d486ea262e243af72e5e64"
+                "reference": "b1be2c8530c4c29c3519a052c9fb6cee55053bbd"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/c151651fb6ed264038d486ea262e243af72e5e64",
-                "reference": "c151651fb6ed264038d486ea262e243af72e5e64",
+                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/b1be2c8530c4c29c3519a052c9fb6cee55053bbd",
+                "reference": "b1be2c8530c4c29c3519a052c9fb6cee55053bbd",
                 "shasum": ""
             },
             "require": {
@@ -4106,7 +4109,7 @@
                 "testing",
                 "xunit"
             ],
-            "time": "2018-10-23T05:57:41+00:00"
+            "time": "2018-11-14T16:52:02+00:00"
         },
         {
             "name": "psr/cache",
@@ -4205,16 +4208,16 @@
         },
         {
             "name": "psr/log",
-            "version": "1.0.2",
+            "version": "1.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/php-fig/log.git",
-                "reference": "4ebe3a8bf773a19edfe0a84b6585ba3d401b724d"
+                "reference": "6c001f1daafa3a3ac1d8ff69ee4db8e799a654dd"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/php-fig/log/zipball/4ebe3a8bf773a19edfe0a84b6585ba3d401b724d",
-                "reference": "4ebe3a8bf773a19edfe0a84b6585ba3d401b724d",
+                "url": "https://api.github.com/repos/php-fig/log/zipball/6c001f1daafa3a3ac1d8ff69ee4db8e799a654dd",
+                "reference": "6c001f1daafa3a3ac1d8ff69ee4db8e799a654dd",
                 "shasum": ""
             },
             "require": {
@@ -4248,7 +4251,7 @@
                 "psr",
                 "psr-3"
             ],
-            "time": "2016-10-10T12:19:37+00:00"
+            "time": "2018-11-20T15:27:04+00:00"
         },
         {
             "name": "psr/simple-cache",
@@ -6490,16 +6493,16 @@
         },
         {
             "name": "zendframework/zend-hydrator",
-            "version": "2.4.0",
+            "version": "2.4.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/zendframework/zend-hydrator.git",
-                "reference": "bd48bc3bc046df007a94125f868dd1aa1b73a813"
+                "reference": "70b02f4d8676e64af932625751750b5ca72fff3a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/zendframework/zend-hydrator/zipball/bd48bc3bc046df007a94125f868dd1aa1b73a813",
-                "reference": "bd48bc3bc046df007a94125f868dd1aa1b73a813",
+                "url": "https://api.github.com/repos/zendframework/zend-hydrator/zipball/70b02f4d8676e64af932625751750b5ca72fff3a",
+                "reference": "70b02f4d8676e64af932625751750b5ca72fff3a",
                 "shasum": ""
             },
             "require": {
@@ -6549,7 +6552,7 @@
                 "hydrator",
                 "zf"
             ],
-            "time": "2018-04-30T21:22:14+00:00"
+            "time": "2018-11-19T19:16:10+00:00"
         },
         {
             "name": "zendframework/zend-i18n",
