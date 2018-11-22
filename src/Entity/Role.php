@@ -12,6 +12,7 @@ use MSBios\Resource\Doctrine\RowStatusableAwareInterface;
 use MSBios\Resource\Doctrine\RowStatusableAwareTrait;
 use MSBios\Resource\Doctrine\TimestampableAwareInterface;
 use MSBios\Resource\Doctrine\TimestampableAwareTrait;
+use Zend\Permissions\Acl\Role\RoleInterface;
 
 /**
  * Class Role
@@ -23,9 +24,9 @@ use MSBios\Resource\Doctrine\TimestampableAwareTrait;
  */
 class Role extends Entity implements
     TimestampableAwareInterface,
-    RowStatusableAwareInterface
+    RowStatusableAwareInterface,
+    RoleInterface
 {
-
     use TimestampableAwareTrait;
     use RowStatusableAwareTrait;
 
@@ -78,10 +79,12 @@ class Role extends Entity implements
 
     /**
      * @param Role $parent
+     * @return $this
      */
-    public function setParent($parent)
+    public function setParent(Role $parent)
     {
         $this->parent = $parent;
+        return $this;
     }
 
     /**
@@ -93,11 +96,13 @@ class Role extends Entity implements
     }
 
     /**
-     * @param ArrayCollection $children
+     * @param $children
+     * @return $this
      */
     public function setChildren($children)
     {
         $this->children = $children;
+        return $this;
     }
 
     /**
@@ -109,11 +114,13 @@ class Role extends Entity implements
     }
 
     /**
-     * @param string $code
+     * @param $code
+     * @return $this
      */
     public function setCode($code)
     {
         $this->code = $code;
+        return $this;
     }
 
     /**
@@ -125,10 +132,20 @@ class Role extends Entity implements
     }
 
     /**
-     * @param string $name
+     * @param $name
+     * @return $this
      */
     public function setName($name)
     {
         $this->name = $name;
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getRoleId()
+    {
+        return $this->getCode();
     }
 }
