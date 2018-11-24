@@ -19,5 +19,5 @@ abstract class Entity extends DefaultEntity
     /**
      * Fatal error: Uncaught ReflectionException: Property MSBios\Guard\Resource\Doctrine\Entity::$id does not exist
      */
-    use IdentifierAwareTrait;
+    // use IdentifierAwareTrait;
 }
