@@ -103,7 +103,7 @@ return [
 
             // Elements
             Form\Element\ResourceSelect::class =>
-                InvokableFactory::class
+                ObjectableFactory::class
         ],
         'aliases' => [
             \MSBios\Guard\Resource\Form\PermissionForm::class =>

@@ -6,8 +6,6 @@
 
 namespace MSBios\Guard\Resource\Doctrine\Form;
 
-use DoctrineModule\Persistence\ObjectManagerAwareInterface;
-use DoctrineModule\Persistence\ProvidesObjectManager;
 use MSBios\Guard\Resource\Doctrine\Form\Element\ResourceSelect;
 use MSBios\Guard\Resource\Form\ResourceForm as DefaultRecourceForm;
 
@@ -15,10 +13,8 @@ use MSBios\Guard\Resource\Form\ResourceForm as DefaultRecourceForm;
  * Class ResourceForm
  * @package MSBios\Guard\Resource\Doctrine\Form
  */
-class ResourceForm extends DefaultRecourceForm implements ObjectManagerAwareInterface
+class ResourceForm extends DefaultRecourceForm
 {
-    use ProvidesObjectManager;
-
     /**
      * @inheritdoc
      *

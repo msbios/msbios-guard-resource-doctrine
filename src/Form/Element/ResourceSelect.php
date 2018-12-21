@@ -5,6 +5,7 @@
  */
 namespace MSBios\Guard\Resource\Doctrine\Form\Element;
 
+use Doctrine\Common\Persistence\ObjectManager;
 use DoctrineModule\Form\Element\ObjectSelect;
 use DoctrineModule\Persistence\ObjectManagerAwareInterface;
 use DoctrineModule\Persistence\ProvidesObjectManager;
@@ -19,6 +20,22 @@ class ResourceSelect extends ObjectSelect implements ObjectManagerAwareInterface
     use ProvidesObjectManager;
 
     /**
+     * ResourceSelect constructor.
+     *
+     * @param ObjectManager $objectManager
+     * @param null $name
+     * @param array $options
+     */
+    public function __construct(ObjectManager $objectManager, $name = null, array $options = [])
+    {
+        parent::__construct($name, $options);
+        $this->setObjectManager($objectManager);
+        $this->init();
+    }
+
+    /**
+     * @inheritdoc
+     *
      * @return $this|void
      */
     public function init()
