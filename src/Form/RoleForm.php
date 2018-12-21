@@ -8,7 +8,7 @@ namespace MSBios\Guard\Resource\Doctrine\Form;
 
 use DoctrineModule\Form\Element\ObjectSelect;
 use DoctrineModule\Persistence\ObjectManagerAwareInterface;
-use MSBios\Doctrine\ObjectManagerAwareTrait;
+use DoctrineModule\Persistence\ProvidesObjectManager;
 use MSBios\Guard\Resource\Doctrine\Entity\Role;
 use MSBios\Guard\Resource\Form\ResourceForm as DefaultRecourceForm;
 
@@ -18,10 +18,12 @@ use MSBios\Guard\Resource\Form\ResourceForm as DefaultRecourceForm;
  */
 class RoleForm extends DefaultRecourceForm implements ObjectManagerAwareInterface
 {
-    use ObjectManagerAwareTrait;
+    use ProvidesObjectManager;
 
     /**
+     * @inheritdoc
      *
+     * @return $this|void
      */
     public function init()
     {
@@ -39,5 +41,7 @@ class RoleForm extends DefaultRecourceForm implements ObjectManagerAwareInterfac
                 'allow_empty' => true
             ],
         ]);
+
+        return $this;
     }
 }

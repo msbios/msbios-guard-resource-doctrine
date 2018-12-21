@@ -7,7 +7,7 @@ namespace MSBios\Guard\Resource\Doctrine\Form\Element;
 
 use DoctrineModule\Form\Element\ObjectSelect;
 use DoctrineModule\Persistence\ObjectManagerAwareInterface;
-use MSBios\Doctrine\ObjectManagerAwareTrait;
+use DoctrineModule\Persistence\ProvidesObjectManager;
 use MSBios\Guard\Resource\Doctrine\Entity\Resource;
 
 /**
@@ -16,10 +16,15 @@ use MSBios\Guard\Resource\Doctrine\Entity\Resource;
  */
 class ResourceSelect extends ObjectSelect implements ObjectManagerAwareInterface
 {
-    use ObjectManagerAwareTrait;
+    use ProvidesObjectManager;
 
+    /**
+     * @return $this|void
+     */
     public function init()
     {
+        parent::init();
+
         $this->getProxy()->setOptions([
             'object_manager' => $this->getObjectManager(),
             'target_class' => Resource::class,
@@ -27,5 +32,7 @@ class ResourceSelect extends ObjectSelect implements ObjectManagerAwareInterface
             'display_empty_item' => true,
             'empty_item_label' => '---',
         ]);
+
+        return $this;
     }
 }

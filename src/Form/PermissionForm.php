@@ -6,8 +6,6 @@
 
 namespace MSBios\Guard\Resource\Doctrine\Form;
 
-use DoctrineModule\Persistence\ObjectManagerAwareInterface;
-use MSBios\Form\Doctrine\ObjectManagerAwareTrait;
 use MSBios\Guard\Resource\Doctrine\Form\Element\ResourceSelect;
 use MSBios\Guard\Resource\Form\PermissionForm as DefaultPermissionForm;
 
@@ -15,16 +13,22 @@ use MSBios\Guard\Resource\Form\PermissionForm as DefaultPermissionForm;
  * Class PermissionForm
  * @package MSBios\Guard\Resource\Doctrine\Form
  */
-class PermissionForm extends DefaultPermissionForm implements ObjectManagerAwareInterface
+class PermissionForm extends DefaultPermissionForm
 {
-    use ObjectManagerAwareTrait;
-
+    /**
+     * @inheritdoc
+     *
+     * @return $this|void
+     */
     public function init()
     {
         parent::init();
+
         $this->add([
             'type' => ResourceSelect::class,
             'name' => 'resource'
         ]);
+
+        return $this;
     }
 }

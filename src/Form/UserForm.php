@@ -8,7 +8,7 @@ namespace MSBios\Guard\Resource\Doctrine\Form;
 
 use DoctrineModule\Form\Element\ObjectSelect;
 use DoctrineModule\Persistence\ObjectManagerAwareInterface;
-use MSBios\Doctrine\ObjectManagerAwareTrait;
+use DoctrineModule\Persistence\ProvidesObjectManager;
 use MSBios\Guard\Resource\Doctrine\Entity\Role;
 use MSBios\Guard\Resource\Form\UserForm as DefaultUserForm;
 use MSBios\Guard\Resource\InputFilter\UserInputFilter;
@@ -20,7 +20,7 @@ use Zend\InputFilter\InputFilterInterface;
  */
 class UserForm extends DefaultUserForm implements ObjectManagerAwareInterface
 {
-    use ObjectManagerAwareTrait;
+    use ProvidesObjectManager;
 
     /**
      * @return $this

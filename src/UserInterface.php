@@ -13,4 +13,5 @@ use MSBios\Guard\Resource\UserInterface as DefaultUserInterface;
  */
 interface UserInterface extends DefaultUserInterface
 {
+    // ...
 }

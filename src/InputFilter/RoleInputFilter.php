@@ -14,8 +14,15 @@ use Zend\InputFilter\InputFilter;
  */
 class RoleInputFilter extends InputFilter
 {
+    /**
+     * @inheritdoc
+     *
+     * @return $this|void
+     */
     public function init()
     {
+        parent::init();
+
         $this->add([
             'name' => 'code',
             'required' => true,
@@ -26,5 +33,7 @@ class RoleInputFilter extends InputFilter
             'name' => 'parent',
             'required' => false,
         ]);
+
+        return $this;
     }
 }

@@ -16,7 +16,9 @@ use MSBios\Guard\Resource\Form\RuleForm as DefaultRuleForm;
 class RuleForm extends DefaultRuleForm
 {
     /**
+     * @inheritdoc
      *
+     * @return $this|void
      */
     public function init()
     {
@@ -26,5 +28,7 @@ class RuleForm extends DefaultRuleForm
             'type' => ResourceSelect::class,
             'name' => 'resource'
         ]);
+
+        return $this;
     }
 }

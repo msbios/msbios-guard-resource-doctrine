@@ -6,12 +6,10 @@
       <excludeFolder url="file://$MODULE_DIR$/vendor/composer" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/container-interop/container-interop" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/digitalnature/php-ref" />
-      <excludeFolder url="file://$MODULE_DIR$/vendor/dkorsak/doctrine-data-fixture-module" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/doctrine/annotations" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/doctrine/cache" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/doctrine/collections" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/doctrine/common" />
-      <excludeFolder url="file://$MODULE_DIR$/vendor/doctrine/data-fixtures" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/doctrine/dbal" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/doctrine/doctrine-module" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/doctrine/doctrine-orm-module" />
@@ -50,6 +48,7 @@
       <excludeFolder url="file://$MODULE_DIR$/vendor/msbios/msbios" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/msbios/navigation" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/msbios/paginator-doctrine" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/msbios/resolver" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/msbios/resource" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/msbios/resource-doctrine" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/msbios/stdlib" />
@@ -77,7 +76,6 @@
       <excludeFolder url="file://$MODULE_DIR$/vendor/phpunit/phpunit" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/psr/cache" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/psr/container" />
-      <excludeFolder url="file://$MODULE_DIR$/vendor/psr/log" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/psr/simple-cache" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/san/san-session-toolbar" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/sebastian/code-unit-reverse-lookup" />
@@ -94,7 +92,6 @@
       <excludeFolder url="file://$MODULE_DIR$/vendor/squizlabs/php_codesniffer" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/config" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/console" />
-      <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/debug" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/dependency-injection" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/filesystem" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/polyfill-ctype" />

@@ -20,7 +20,6 @@ use MSBios\Resource\Doctrine\TimestampableAwareTrait;
  */
 class Permission extends Entity implements TimestampableAwareInterface
 {
-
     use TimestampableAwareTrait;
 
     /**
@@ -56,11 +55,13 @@ class Permission extends Entity implements TimestampableAwareInterface
     }
 
     /**
-     * @param Resource $resource
+     * @param $resource
+     * @return $this
      */
     public function setResource($resource)
     {
         $this->resource = $resource;
+        return $this;
     }
 
     /**
@@ -72,11 +73,13 @@ class Permission extends Entity implements TimestampableAwareInterface
     }
 
     /**
-     * @param string $code
+     * @param $code
+     * @return $this
      */
     public function setCode($code)
     {
         $this->code = $code;
+        return $this;
     }
 
     /**
@@ -88,10 +91,12 @@ class Permission extends Entity implements TimestampableAwareInterface
     }
 
     /**
-     * @param string $name
+     * @param $name
+     * @return $this
      */
     public function setName($name)
     {
         $this->name = $name;
+        return $this;
     }
 }

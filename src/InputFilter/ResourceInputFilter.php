@@ -14,8 +14,15 @@ use Zend\InputFilter\InputFilter;
  */
 class ResourceInputFilter extends InputFilter
 {
+    /**
+     * @inheritdoc
+     *
+     * @return $this|void
+     */
     public function init()
     {
+        parent::init();
+
         $this->add([
             'name' => 'code',
             'required' => true,
@@ -26,5 +33,7 @@ class ResourceInputFilter extends InputFilter
             'name' => 'parent',
             'required' => false,
         ]);
+
+        return $this;
     }
 }

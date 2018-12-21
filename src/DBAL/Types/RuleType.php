@@ -19,6 +19,8 @@ class RuleType extends EnumType
     const NAME = 'rule_type';
 
     /**
+     * @inheritdoc
+     *
      * @return array
      */
     public function getValues()
@@ -30,11 +32,9 @@ class RuleType extends EnumType
     }
 
     /**
-     * Gets the name of this type.
+     * @inheritdoc
      *
      * @return string
-     *
-     * @todo Needed?
      */
     public function getName()
     {

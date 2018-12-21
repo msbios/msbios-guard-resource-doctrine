@@ -6,6 +6,7 @@
 
 namespace MSBios\Guard\Resource\Doctrine;
 
+use MSBios\Doctrine\Factory\ObjectableFactory;
 use Zend\ServiceManager\Factory\InvokableFactory;
 
 return [
@@ -63,9 +64,9 @@ return [
     'service_manager' => [
         'factories' => [
             Provider\ResourceProvider::class =>
-                Factory\ResourceProviderFactory::class,
+                ObjectableFactory::class,
             Provider\RuleProvider::class =>
-                Factory\RuleProviderFactory::class,
+                ObjectableFactory::class,
         ]
     ],
 

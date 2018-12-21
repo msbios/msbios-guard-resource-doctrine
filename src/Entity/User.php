@@ -29,7 +29,6 @@ class User extends Entity implements
     TimestampableAwareInterface,
     RowStatusableAwareInterface
 {
-
     use TimestampableAwareTrait;
     use RowStatusableAwareTrait;
 
