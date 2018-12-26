@@ -71,7 +71,7 @@ class ResourceProvider implements ResourceProviderInterface, ProviderInterface, 
         if (is_null($this->resources)) {
 
             /** @var array $results */
-            $results = $this->dem
+            $results = $this->getObjectManager()
                 ->getRepository(ResourceEntity::class)
                 ->findByParent(null);
 

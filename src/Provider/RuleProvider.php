@@ -7,7 +7,6 @@
 namespace MSBios\Guard\Resource\Doctrine\Provider;
 
 use Doctrine\Common\Persistence\ObjectManager;
-use Doctrine\ORM\EntityManagerInterface;
 use DoctrineModule\Persistence\ObjectManagerAwareInterface;
 use DoctrineModule\Persistence\ProvidesObjectManager;
 use MSBios\Guard\Provider\ProviderInterface;
@@ -61,7 +60,7 @@ class RuleProvider implements RuleProviderInterface, ProviderInterface, ObjectMa
     protected function doInitialize()
     {
         /** @var array $results */
-        $results = $this->dem
+        $results = $this->getObjectManager()
             ->getRepository(Rule::class)
             ->findAll();
 
