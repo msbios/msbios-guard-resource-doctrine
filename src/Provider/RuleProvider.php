@@ -6,7 +6,10 @@
 
 namespace MSBios\Guard\Resource\Doctrine\Provider;
 
+use Doctrine\Common\Persistence\ObjectManager;
 use Doctrine\ORM\EntityManagerInterface;
+use DoctrineModule\Persistence\ObjectManagerAwareInterface;
+use DoctrineModule\Persistence\ProvidesObjectManager;
 use MSBios\Guard\Provider\ProviderInterface;
 use MSBios\Guard\Provider\RuleProviderInterface;
 use MSBios\Guard\Resource\Doctrine\Entity\Rule;
@@ -15,10 +18,9 @@ use MSBios\Guard\Resource\Doctrine\Entity\Rule;
  * Class RuleProvider
  * @package MSBios\Guard\Resource\Doctrine\Provider
  */
-class RuleProvider implements RuleProviderInterface, ProviderInterface
+class RuleProvider implements RuleProviderInterface, ProviderInterface, ObjectManagerAwareInterface
 {
-    /** @var EntityManagerInterface */
-    protected $dem;
+    use ProvidesObjectManager;
 
     /** @var array */
     protected $rules = [
@@ -33,11 +35,11 @@ class RuleProvider implements RuleProviderInterface, ProviderInterface
 
     /**
      * RuleProvider constructor.
-     * @param EntityManagerInterface $dem
+     * @param ObjectManager $objectManager
      */
-    public function __construct(EntityManagerInterface $dem)
+    public function __construct(ObjectManager $objectManager)
     {
-        $this->dem = $dem;
+        $this->setObjectManager($objectManager);
     }
 
     /**

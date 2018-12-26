@@ -5,34 +5,34 @@
  */
 namespace MSBios\Guard\Resource\Doctrine\Provider;
 
-use Doctrine\ORM\EntityManager;
-use Doctrine\ORM\EntityManagerInterface;
+use Doctrine\Common\Persistence\ObjectManager;
 use Doctrine\ORM\PersistentCollection;
-use MSBios\Guard\Permission\Resource;
+use DoctrineModule\Persistence\ObjectManagerAwareInterface;
+use DoctrineModule\Persistence\ProvidesObjectManager;
 use MSBios\Guard\Provider\ProviderInterface;
 use MSBios\Guard\Provider\ResourceProviderInterface;
 use MSBios\Guard\Resource\Doctrine\Entity\Resource as ResourceEntity;
+use MSBios\Permissions\Acl\Resource\Resource;
 use Zend\Stdlib\ArrayUtils;
 
 /**
  * Class ResourceProvider
  * @package MSBios\Guard\Resource\Doctrine\Provider
  */
-class ResourceProvider implements ResourceProviderInterface, ProviderInterface
+class ResourceProvider implements ResourceProviderInterface, ProviderInterface, ObjectManagerAwareInterface
 {
-    /** @var EntityManagerInterface */
-    protected $dem;
+    use ProvidesObjectManager;
 
     /** @var Resource[] */
     protected $resources;
 
     /**
      * ResourceProvider constructor.
-     * @param EntityManagerInterface $dem
+     * @param ObjectManager $objectManager
      */
-    public function __construct(EntityManagerInterface $dem)
+    public function __construct(ObjectManager $objectManager)
     {
-        $this->dem = $dem;
+        $this->setObjectManager($objectManager);
     }
 
     /**

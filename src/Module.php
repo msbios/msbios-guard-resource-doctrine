@@ -12,7 +12,7 @@ namespace MSBios\Guard\Resource\Doctrine;
 class Module extends \MSBios\Module
 {
     /** @const VERSION */
-    const VERSION = '1.0.42';
+    const VERSION = '1.0.43';
 
     /**
      * @inheritdoc
