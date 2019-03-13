@@ -8,6 +8,8 @@
 return [
     // Retrieve list of modules used in this application.
     'modules' => [
+        'MSBios\View',
+        'Zend\Serializer',
         'MSBios\Session',
         'MSBios\Permissions\Acl',
         'MSBios\Paginator\Doctrine',
