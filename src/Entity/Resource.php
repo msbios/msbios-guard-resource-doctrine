@@ -31,7 +31,7 @@ class Resource extends Entity implements
     /**
      * @var Resource
      *
-     * @ORM\ManyToOne(targetEntity="Resource")
+     * @ORM\ManyToOne(targetEntity="Resource", inversedBy="children")
      * @ORM\JoinColumns({
      *   @ORM\JoinColumn(name="pid", referencedColumnName="id")
      * })

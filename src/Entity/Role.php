@@ -33,7 +33,7 @@ class Role extends Entity implements
     /**
      * @var Role
      *
-     * @ORM\ManyToOne(targetEntity="MSBios\Guard\Resource\Doctrine\Entity\Role")
+     * @ORM\ManyToOne(targetEntity="Role", inversedBy="children")
      * @ORM\JoinColumns({
      *   @ORM\JoinColumn(name="pid", referencedColumnName="id")
      * })
